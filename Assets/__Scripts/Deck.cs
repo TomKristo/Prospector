@@ -235,6 +235,21 @@ public class Deck : MonoBehaviour {
 				tGO.transform.localPosition = Vector3.zero;  // slap it smack dab in the middle
 				tGO.name = "face";
 			}
+
+            //Add Card Back
+            //The Card_Back will be able to cover everything else on the Card
+            tGO = Instantiate(prefabSprite) as GameObject;
+            tSR = tGO.GetComponent<SpriteRenderer>();
+            tSR.sprite = cardBack;
+            tGO.transform.parent = card.transform;
+            tGO.transform.localPosition = Vector3.zero;
+            //This is a higher sortingOrder than anything else
+            tSR.sortingOrder = 2;
+            tGO.name = "back";
+            card.back = tGO;
+
+            //Default to face-up
+            card.faceUp = false; //Use the property faceUp of Card
 			
 			cards.Add (card);
 		} // for all the Cardnames	
@@ -250,4 +265,26 @@ public class Deck : MonoBehaviour {
 		return (null);  // couldn't find the sprite (should never reach this line)
 	 }// getFace 
 	
+    //Shuffle the cards in Deck.cards
+    static public void Shuffle(ref List<Card> oCards)
+    {
+        //Create a temporary List to hold the new shuffle order
+        List<Card> tCards = new List<Card>();
+
+        int ndx; //Holds index of card to be moved
+        tCards = new List<Card>(); //Initialize temp list
+        //Repeat as long as there are cards in the original List
+        while (oCards.Count > 0)
+        {
+            //Pick random card's index
+            ndx = Random.Range(0, oCards.Count);
+            //Add card to temp List
+            tCards.Add(oCards[ndx]);
+            //Remove from original List
+            oCards.RemoveAt(ndx);
+        }
+        //Replace the original List with the temp List
+        oCards = tCards;
+
+    }
 } // Deck class

@@ -15,8 +15,20 @@ public class Card : MonoBehaviour {
 	public GameObject back;  // back of card;
 	public CardDefinition def;  // from DeckXML.xml		
 
-	// Use this for initialization
-	void Start () {
+    public bool faceUp
+    {
+        get
+        {
+            return (!back.activeSelf);
+        }
+        set
+        {
+            back.SetActive(!value);
+        }
+    }
+
+    // Use this for initialization
+    void Start () {
 	
 	}
 	
@@ -40,4 +52,5 @@ public class CardDefinition{
 	public int		rank;	// value from 1-13 (Ace-King)
 	public List<Decorator>	
 					pips = new List<Decorator>();  // Pips Used
+
 }
