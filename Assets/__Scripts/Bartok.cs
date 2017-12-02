@@ -6,7 +6,6 @@ public class Bartok : MonoBehaviour
 {
     static public Bartok S;
 
-
     public TextAsset deckXML;
     public TextAsset layoutXML;
     public Vector3 layoutCenter = Vector3.zero;
@@ -21,7 +20,6 @@ public class Bartok : MonoBehaviour
     void Awake()
     {
         S = this;
-
     }
 
     void Start()

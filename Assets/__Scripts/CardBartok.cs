@@ -94,7 +94,6 @@ public class CardBartok : Card
                     transform.localPosition = pos;
                     Quaternion rotQ = Utils.Bezier(uC, bezierRots);
                     transform.rotation = rotQ;
-
                 }
                 break;
         }
