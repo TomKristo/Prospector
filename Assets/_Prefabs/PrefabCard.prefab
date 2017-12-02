@@ -10,8 +10,8 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 21200000}
   - component: {fileID: 6500000}
-  - component: {fileID: 114451749150935110}
   - component: {fileID: 54353564422287706}
+  - component: {fileID: 114158546967488332}
   m_Layer: 0
   m_Name: PrefabCard
   m_TagString: Untagged
@@ -112,7 +112,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &114451749150935110
+--- !u!114 &114158546967488332
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -120,31 +120,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f125d25e796fa4f47bea68da24db1ff1, type: 3}
+  m_Script: {fileID: 11500000, guid: dd2d203241736be44aee40ada39ac4ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  suit: 
-  rank: 0
-  color: {r: 0, g: 0, b: 0, a: 1}
-  colS: Black
-  decoGOs: []
-  pipGOs: []
-  back: {fileID: 0}
-  def:
-    face: 
-    rank: 0
-    pips: []
-  spriteRenderers: []
-  state: 0
-  hiddenBy: []
-  layoutID: 0
-  slotDef:
-    x: 0
-    y: 0
-    faceUp: 0
-    layerName: Default
-    layerID: 0
-    id: 0
-    hiddenBy: 
-    type: slot
-    stagger: {x: 0, y: 0}
